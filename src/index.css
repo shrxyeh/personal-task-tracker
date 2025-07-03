@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.border-red-500 {
+  border-color: #ef4444;
+}
+.border-yellow-500 {
+  border-color: #eab308;
+}
+.border-green-500 {
+  border-color: #22c55e;
+}
+
+.task-item-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.task-item-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms, transform 200ms;
+}
+.task-item-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.task-item-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 200ms, transform 200ms;
+}
