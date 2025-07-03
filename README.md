@@ -51,16 +51,17 @@ Follow these steps to run the project locally:
 ## Live Demo
 
 Check out the live version:
-[View Live Demo](https://personal-task-tracker-url.vercel.app)
+[View Live Demo](https://personal-task-tracker-alpha.vercel.app/)
 
 
 ## Screenshots
 
 Login Screen
-![Login Screen](./public/screenshot-login.png)
+![Screenshot 2025-07-03 104051](https://github.com/user-attachments/assets/1ed08001-4be8-4033-b9d7-e5d27972b9f7)
 
 Task Dashboard
-![Task Dashboard](./public/screenshot-dashboard.png)
+![Screenshot 2025-07-03 104304](https://github.com/user-attachments/assets/898058d1-b30f-41d3-bc71-93771fea1e11)
+![Screenshot 2025-07-03 104350](https://github.com/user-attachments/assets/469b0cbe-66e0-43bc-ad3c-6e369c56a8a3)
 
 
 ## License
