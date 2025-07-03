@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Edit2, Trash2, Flag, Tag as TagIcon, Calendar } from 'lucide-react';
+import { Check, Edit2, Trash2, Flag, Tag as TagIcon, Calendar, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { format, parseISO } from 'date-fns';
 
@@ -57,6 +57,11 @@ const TaskItem = ({ task, onToggleComplete, onDeleteTask, onEditTask, darkMode }
               </h3>
             </div>
             
+            <div className={`flex items-center mt-1 text-xs ${darkMode ? 'text-gray-500' : 'text-gray-600'}`}>
+              <Clock className="w-3 h-3 mr-1" />
+              Created: {format(parseISO(task.createdAt), 'MMM dd, yyyy h:mm a')}
+            </div>
+
             {task.description && (
               <p className={`text-sm mt-1 ${task.completed ? (darkMode ? 'text-gray-500' : 'text-gray-400') : (darkMode ? 'text-gray-300' : 'text-gray-600')}`}>
                 {task.description}
@@ -66,9 +71,9 @@ const TaskItem = ({ task, onToggleComplete, onDeleteTask, onEditTask, darkMode }
             {(task.dueDate || task.tags?.length > 0) && (
               <div className="flex flex-wrap items-center gap-4 mt-2">
                 {task.dueDate && (
-                  <div className={`flex items-center text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {format(parseISO(task.dueDate), 'MMM dd, yyyy')}
+                  <div className={`flex items-center text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    <Calendar className="w-3 h-3 mr-1" />
+                    Due: {format(parseISO(task.dueDate), 'MMM dd, yyyy')}
                   </div>
                 )}
                 
